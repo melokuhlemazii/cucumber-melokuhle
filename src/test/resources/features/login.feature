@@ -1,3 +1,4 @@
+@login @Regression @Sanity
 Feature: login
 
   Scenario Outline: as a user i want to login to ndosi website
