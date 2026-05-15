@@ -7,9 +7,13 @@ Feature: login
     And I enter password <password>
     When I click login button
     Then i should be logged in successfully
+    And I click mobile automation
     Examples:
-      | email                   | password     |
-      | melomazibuko8@gmail.com | Mwelase@1031 |
+      | email             | password  |
+      | admin@gmail.com   | @12345678 |
+
+
+
 
 
 

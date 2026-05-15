@@ -7,20 +7,20 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
+import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 
-public class HomePage {
+public class HomePage{
     WebDriver driver;
 
     @FindBy(xpath = "//span[text()='Login']")
-    WebElement loginHeading_xpath;
+    WebElement loginButton_xpath;
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
 
     public void clickLoginButton(){
-        new WebDriverWait(driver, Duration.ofSeconds(15)).until(visibilityOf(loginHeading_xpath));
-        loginHeading_xpath.isDisplayed();
+        new WebDriverWait(driver, Duration.ofSeconds(15)).until(elementToBeClickable(loginButton_xpath));
+        loginButton_xpath.click();
     }
 }
